@@ -48,11 +48,30 @@ public:
 	}
 }r3;//在类的声明，定义之后创建类的对象
 
+struct Person
+{
+public:
+	Person(const string &nm, const string &addr) :name(nm), address(addr) {}
+	string getName() const
+	{
+		return name;
+	}
+	string getAddress() const
+	{
+		return address;
+	}
+private:
+	string name;
+	string address;
+};
+
 int main()
 {
 	Screen *scr;
 	Record r;//在堆栈上创建类的对象
 	class Record r2;//c语言的写法
+
+	struct Person per("Bill", "花园街5号");
 	cout << "hello" << endl;
 	return 0;
 }
