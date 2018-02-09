@@ -63,7 +63,7 @@ public:
 private:
 	string name;
 	string address;
-};
+}a,b;
 
 int main()
 {
