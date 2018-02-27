@@ -13,10 +13,7 @@ public://写在类里面的函数都是内联函数
 	typedef std::string::size_type index;//使用类型别名来简化类
 
 	//程序在初始化的时候contents里面是ht*wd个A,cursor是0，表示光标所在是位置，height表示内容的高度，width表示内容的宽度
-	Screen(index ht = 0, index wd = 0) :contents(ht*wd, 'A'), cursor(0), height(ht), width(wd)
-	{
-
-	}
+	Screen(index ht = 0, index wd = 0) :contents(ht*wd, 'A'), cursor(0), height(ht), width(wd){}
 	Screen(index ht, index wd, const string &conts);
 
 	char get() const;//重载函数1

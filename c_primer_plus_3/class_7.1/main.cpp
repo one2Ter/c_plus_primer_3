@@ -7,7 +7,7 @@ class Person
 {
 public:
 	Person() :age(0) {}//默认的构造函数
-	Person(const string &nm) :name(nm), age(0) {}
+	Person(const string &nm):name(nm), age(0) {}
 public:
 	string name;
 	int age;

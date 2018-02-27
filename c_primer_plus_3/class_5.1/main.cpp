@@ -36,8 +36,8 @@ class Screen//屏幕上面的窗口
 {
 public:
 	typedef string::size_type index;
-	Screen(index ht=0,index wd=0):contents(ht*wd,'A'),cursor(ht),width(wd),access_ctr(0)
-	{}
+	Screen(index ht=0,index wd=0):contents(ht*wd,'A'),cursor(ht),width(wd),access_ctr(0){}
+	
 	char get() const
 	{
 		return contents[cursor];
@@ -48,6 +48,7 @@ public:
 		return contents[row + c];
 	}
 	Screen& move(index r, index c);
+	//返回值是引用类型是作用在于可以多次调用类里面的函数，简化程序
 	void set(index, index, char);
 	Screen& set(char);
 	const Screen& display(ostream &os) const

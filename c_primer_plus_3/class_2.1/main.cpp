@@ -19,7 +19,7 @@ class Person
 	//public定义的类公有部分的接口
 public://在函数的后面加上：可以通过nm来初始化name,addr来初始化address
 	Person(const string& nm,const string &addr) :name(nm),address(addr)
-	{
+	{//这里为什么是引用，引用是将外界的变量直接调用到这个函数内部来，速度更快，减少的数据复制的过程
 	};
 	string getName() const
 	{
@@ -45,7 +45,7 @@ private:
 
 public://定义了一本书，书初始化需要书籍名称，销售的数量以及拿到的钱
 	Sales_item(string &book, unsigned units,double amount):isbn(book),units_sold(units),revenue(amount)
-	{}
+	{}//类的重载函数，通过参数进行初始化
 
 	double avg_price() const//计算平均价格
 	{
@@ -60,7 +60,7 @@ public://定义了一本书，书初始化需要书籍名称，销售的数量以及拿到的钱
 		return isbn == rhs.isbn;
 	}
 
-	void add(const Sales_item &rhs)
+	void add(const Sales_item &rhs)//这里因为没有进行重载操作符，使用add函数将两个类里面的数据进行相加
 	{
 		units_sold += rhs.units_sold;
 		revenue += rhs.revenue;

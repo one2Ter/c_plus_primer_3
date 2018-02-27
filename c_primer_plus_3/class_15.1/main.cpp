@@ -3,10 +3,7 @@
 #include<string>
 using namespace std;
 
-class Dog
-{
-
-};
+class Dog{};
 
 class Sales_item
 {
